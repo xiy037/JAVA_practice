@@ -1,4 +1,4 @@
-package objectLession.hw1;
+package objectLessons.hw1;
 
 class Animal {
   private int age;
@@ -63,7 +63,7 @@ public class AnimalSound {
     Tiger aTiger = new Tiger();
     aTiger.tigerMeow();
     System.out.println("So do tigers!");
-    Tiger bTiger = new Tiger(3, 50);
+    Animal bTiger = new Tiger(3, 50); //note here you can use parent class type for bTiger.
     String result = "b tiger is " + bTiger.getAge() + " years old. He weights " + bTiger.getWeight() + "lbs";
     System.out.println(result);
     bTiger.setAge(6);
