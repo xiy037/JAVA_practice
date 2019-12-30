@@ -13,12 +13,18 @@ abstract class Person {
 }
 
 public class Employee extends Person {
-  public Employee(String x) {
+  private int salary;
+  public Employee(String x, int y) {
     super(x);
+    this.salary = y;
+  }
+
+  public int getSalary() {
+    return salary;
   }
 
   @Override
   public String getDescription() {
-    return "This employee's name is " + this.getName();
+    return "This employee's name is " + this.getName() + " and his salary is " + this.getSalary() + " rmb";
   }
 }
