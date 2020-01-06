@@ -1,6 +1,6 @@
 package objectLessons.collectionsDemo;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class HashMapDemo {
 
@@ -26,11 +26,28 @@ public class HashMapDemo {
     firstName.put(1, "Alan");
     firstName.put(2, "Emma");
     firstName.put(3, "Tom");
-    HashMap<Integer, String> lasttName = new HashMap<>();
-    lasttName.put(1, "Smith");
-    lasttName.put(2, "Watson");
-    lasttName.put(3, "Morison");
-    firstName.forEach((key, newV) -> lasttName.merge(key, newV, (prev, curr) -> prev + ", " + curr));
-    lasttName.forEach((k, v) -> System.out.println("id " + k + " is " +v));
+    HashMap<Integer, String> lastName = new HashMap<>();
+    lastName.put(1, "Smith");
+    lastName.put(2, "Watson");
+    lastName.put(3, "Morison");
+    firstName.forEach((key, newV) -> lastName.merge(key, newV, (prev, curr) -> prev + ", " + curr));
+    lastName.forEach((k, v) -> System.out.println("id " + k + " is " +v));
+    sortMap(lastName);
+  }
+
+  public static void sortMap(HashMap<Integer, String> map) {
+    List<Map.Entry<Integer, String>> sortedList = new ArrayList<>(map.entrySet());
+    Comparator<Map.Entry<Integer, String>> keyComparator = new Comparator<Map.Entry<Integer, String>>() {
+      @Override
+      public int compare(Map.Entry<Integer, String> o1, Map.Entry<Integer, String> o2) {
+        return o2.getKey() - o1.getKey();
+      }
+    };
+    Collections.sort(sortedList, keyComparator);
+    Map<Integer, String> sortedMap= new LinkedHashMap<>();
+    for (Map.Entry<Integer, String> x : sortedList) {
+      sortedMap.put(x.getKey(), x.getValue());
+    }
+    System.out.println(sortedMap);
   }
 }
