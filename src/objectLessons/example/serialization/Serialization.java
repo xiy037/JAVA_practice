@@ -9,7 +9,7 @@ public class Serialization {
   public static void main(String[] args) {
     Student alex = new Student("Alex", 16);
     try {
-      FileOutputStream fileOut = new FileOutputStream("../studentInfo.txt");
+      FileOutputStream fileOut = new FileOutputStream("./files/studentInfo.txt");
       ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
       objOut.writeObject(alex);
       objOut.close();

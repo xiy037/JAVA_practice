@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 public class Deserialization {
   public static void main(String[] args) {
     try {
-      FileInputStream fileIn = new FileInputStream("../studentInfo.txt");
+      FileInputStream fileIn = new FileInputStream("./files/studentInfo.txt");
       ObjectInputStream objIn = new ObjectInputStream(fileIn);
       Student s = (Student)objIn.readObject();
       objIn.close();
