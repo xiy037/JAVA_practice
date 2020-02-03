@@ -23,16 +23,16 @@ public class GuessGame {
         hitTarget = true;
         break;
       } else if (userNumber < number) {
-        System.out.println("Your guess is less than the target");
+        System.out.println("Your guess " + userNumber + " is less than the target");
       } else {
-        System.out.println("Your guess is larger than the target");
+        System.out.println("Your guess " + userNumber + " is larger than the target");
       }
     }
 
     if(hitTarget) {
-      System.out.println("You win the game!");
+      System.out.println("You win the game! The target is " + number);
     } else {
-      System.out.println("You lose the game!");
+      System.out.println("You lose the game! The target is " + number);
     }
   }
 }
