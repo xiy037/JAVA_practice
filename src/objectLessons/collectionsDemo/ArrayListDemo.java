@@ -25,6 +25,11 @@ public class ArrayListDemo {
     for (int i = 0; i < cars.size(); i++) {
       System.out.println(cars.get(i));
     }
+    cars.add(2, "Benz");
+    System.out.println("cars new size is " + cars.size());
+    for (String car: cars) {
+      System.out.println(car);
+    }
     //或者用for-each loop
     cars.removeIf(y -> y.equals("BMW"));
     System.out.println("=======================");
