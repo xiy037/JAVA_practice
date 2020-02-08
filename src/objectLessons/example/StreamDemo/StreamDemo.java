@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class MyIntStream {
+public class StreamDemo {
   public static void main(String[] args) {
     String divider = "===========================";
     //use IntStream.range(x, y) to get the source stream of int
