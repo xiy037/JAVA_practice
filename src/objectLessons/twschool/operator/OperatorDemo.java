@@ -6,7 +6,7 @@ public class OperatorDemo {
     int b = 4;
     b++;
     System.out.println(b);
-    int result = b*12+(b--)+a*(b--);
+    int result = b*12+ (b--) +a*(b--);
     System.out.println(b);
     System.out.println(result);
 
@@ -14,5 +14,6 @@ public class OperatorDemo {
     int n = i++%5;
     System.out.println(n);
   }
+
 }
 

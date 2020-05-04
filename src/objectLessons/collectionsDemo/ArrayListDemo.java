@@ -8,7 +8,6 @@ public class ArrayListDemo {
     list.add("demo");
     String x = (String)list.get(0);
     System.out.println(x);
-
     ArrayList<String> list2 = new ArrayList<>();
     list2.add("hello");
     list2.add("world");

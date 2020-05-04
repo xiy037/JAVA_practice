@@ -27,4 +27,5 @@ public class Employee extends Person {
   public String getDescription() {
     return "This employee's name is " + this.getName() + " and his salary is " + this.getSalary() + " rmb";
   }
+
 }
